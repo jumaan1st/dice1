@@ -1,3 +1,4 @@
+let score1 = 0, score2 = 0;
 document.querySelector(".btn").addEventListener("click", dice)
 function dice() {
   var sound = new Audio('sound.mp3');
@@ -12,21 +13,17 @@ function dice() {
     document.querySelector(".I").classList.remove("play");
     document.querySelector(".II").classList.remove("play");
   }, 200);
-
-
   var m = Math.random() * 6;
   m = Math.floor(m + 1);
   var ne = "images/dice" + m + ".png";
   document.querySelector(".II").setAttribute("src", ne);
-
   if (m > n) {
     document.querySelector(".result").innerHTML = "Player 2 Wins";
+    document.querySelector(".comp").innerHTML = ++score2;
   }
   else if (n > m) {
     document.querySelector(".result").innerHTML = "Player 1 Wins";
+    document.querySelector(".you").innerHTML = ++score1;
   }
   else {
-    document.querySelector(".result").innerHTML = "Draw";
-  }
-
-}
+    document.querySelector(".result").innerHTML = "Draw";  }}
