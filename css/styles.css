@@ -1,5 +1,3 @@
-
-
 body{
   text-align: center;
   background-color: #4c616e;
@@ -92,3 +90,12 @@ p{
   background-color: #1E262C;
   ;
 }
+.container
+{
+    font-family: 'Acme', sans-serif;
+    color: darkslateblue;
+    display: flex;
+    justify-content: space-around;
+    font-size:1.5rem;
+}
+
